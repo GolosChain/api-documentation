@@ -1395,7 +1395,7 @@ meta.getUserLastOnline:          // Получить время (timestamp) по
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "TODO",
+  "method": "rates.getActual",
   "params": {
     // TODO Будет описан позднее
   }
@@ -1430,7 +1430,7 @@ _Не описаны..._
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "TODO",
+  "method": "rates.getHistorical",
   "params": {
     // TODO Будет описан позднее
   }
@@ -1465,7 +1465,7 @@ _Не описаны..._
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "TODO",
+  "method": "rates.getHistoricalMulti",
   "params": {
     // TODO Будет описан позднее
   }
@@ -1502,13 +1502,14 @@ _Не описаны..._
 
 Пример:
 
+Получить профиль пользователя `destroyer2k`
 ```json
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "TODO",
+  "method": "content.getProfile",
   "params": {
-    // TODO Будет описан позднее
+    "userId": "destroyer2k"
   }
 }
 ```
@@ -1539,13 +1540,16 @@ _Не описаны..._
 
 Пример:
 
+Получить пост, идентифицируемый указанными параметрами
 ```json
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "TODO",
+  "method": "content.getPost",
   "params": {
-    // TODO Будет описан позднее
+    "userId": "destroyer2k",
+    "permlink": "myowncontent",
+    "refBlockNum": 12345
   }
 }
 ```
@@ -1593,13 +1597,15 @@ _Не описаны..._
 
 Пример:
 
+Получить ленту популярного контента для комьюнити `gls`
 ```json
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "TODO",
+  "method": "content.getFeed",
   "params": {
-    // TODO Будет описан позднее
+    "sortBy": "popular",
+    "communityId": "gls"    
   }
 }
 ```
@@ -1638,13 +1644,16 @@ _Не описаны..._
 
 Пример:
 
+Получить список комментариев для поста, идентифицируемого указанными параметрами
 ```json
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "TODO",
+  "method": "content.getComments",
   "params": {
-    // TODO Будет описан позднее
+    "userId": "destroyer2k",
+    "permlink": "myowncontent",
+    "refBlockNum": 12345
   }
 }
 ```
@@ -1682,13 +1691,15 @@ _Не описаны..._
 
 Пример:
 
+Обработать и получить контент по ссылке `https://site.com/content` используя `oembed`
 ```json
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "TODO",
+  "method": "frame.getEmbed",
   "params": {
-    // TODO Будет описан позднее
+    "type": "oembed",
+    "url": "https://site.com/content"
   }
 }
 ```
