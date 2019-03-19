@@ -444,6 +444,48 @@ _Не описаны..._
 
 Пример:
 
+Меняем настройки рассылки для web-нотификаций - включаем отображение лайков и отключаем дизлайков
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "options.set",
+  "params": {
+    "profile": "aFiclsSPkdshg",
+    "notify": {
+      "show": {
+        "upvote": true,
+        "downvote": false
+      }
+    }
+  }
+}
+```
+
+Включаем отображение репостов на мобильных устройствах, при этом отключаем их для web-нотификаций
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "options.set",
+  "params": {
+    "profile": "doskEsfdlnkl",
+    "push": {
+      "show": {
+        "repost": true
+      }
+    },
+    "notify": {
+      "show": {
+        "repost": false
+      }
+    }
+  }
+}
+```
+
 Установка предпочитаемой валюты отображения на `USD`, а языка мобильных оповещений на английский
 
 ```json
@@ -452,7 +494,7 @@ _Не описаны..._
   "jsonrpc": "2.0",
   "method": "options.set",
   "params": {
-    "profile": "web",
+    "profile": "odslkhYslkd",
     "basic": {
       "currency": "USD"
     },
