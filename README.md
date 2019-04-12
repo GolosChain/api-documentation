@@ -25,7 +25,7 @@
     - [onlineNotify.off](#onlinenotifyoff)
     - [onlineNotify.history](#onlinenotifyhistory)
     - [onlineNotify.historyFresh](#onlinenotifyhistoryfresh)
-  - [Push-нотификации с учетом настроек (Push для мобильных устройств)](#push-нотификации-с-учетом-настроек-push-для-мобильных-устройств))
+  - [Push-нотификации с учетом настроек (Push для мобильных устройств)](#push-нотификации-с-учетом-настроек-push-для-мобильных-устройств)
     - [push.notifyOn](#pushnotifyon)
     - [push.notifyOff](#pushnotifyoff)
     - [push.history](#pushhistory)
