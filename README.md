@@ -60,6 +60,7 @@
     - [content.getComment](#contentgetcomment)
     - [content.getComments](#contentgetcomments)
     - [content.getHashTagTop](#contentgethashtagtop)
+    - [content.getLeadersTop](#contentgetleaderstop)
   - [Встроенный контент](#встроенный-контент)
     - [frame.getEmbed](#framegetembed)
 
@@ -2101,6 +2102,45 @@ _Не описаны..._
   "id": 1,
   "jsonrpc": "2.0",
   "method": "content.getHashTagTop",
+  "params": {
+    "communityId": "gls"
+  }
+}
+```
+
+**<=== Ответ**
+
+_Не описан..._
+
+**<=x= Ошибки**
+
+_Не описаны..._
+
+---
+
+#### `content.getLeadersTop`
+
+**Запрос ===>**
+
+|       Процедура       | Авторизация  | Описание                          |
+| :-------------------: | :----------: | --------------------------------- |
+| content.getLeadersTop | Не требуется | Получение топа лидеров сообщества |
+
+|  Параметр   |  Тип   | Обяз. | По умолч. | Описание                                                                                   |
+| :---------: | :----: | :---: | :-------: | ------------------------------------------------------------------------------------------ |
+| communityId | string |  Да   |           | Идентификатор комьюнити                                                                    |
+|    limit    | number |  Нет  |    10     | Количество необходимых элементов                                                           |
+| sequenceKey | string |  Нет  |           | Ключ пагинации с сервера для получения следующего списка данных, null вернет первый список |
+
+Пример:
+
+Получить топ лидеров для комьюнити `gls`
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "content.getLeadersTop",
   "params": {
     "communityId": "gls"
   }
