@@ -64,7 +64,8 @@
     - [content.getPostVotes](#contentgetpostvotes)
     - [content.getCommentVotes](#contentgetcommentvotes)
     - [content.resolveProfile](#contentresolveprofile)
-    - [content.getSubscribes](#contentgetsubscribes)
+    - [content.getSubscriptions](#contentgetsubscriptions)
+    - [content.getSubscribers](#contentgetsubscribers)
   - [Встроенный контент](#встроенный-контент)
     - [frame.getEmbed](#framegetembed)
 
@@ -2343,13 +2344,13 @@ _Не описаны..._
 
 ---
 
-#### `content.getSubscribes`
+#### `content.getSubscriptions`
 
 **Запрос ===>**
 
 |       Процедура       | Авторизация  | Описание                                     |
 | :-------------------: | :----------: | -------------------------------------------- |
-| content.getSubscribes | Не требуется | Получить подписчиков и подписки пользователя |
+| content.getSubscriptions | Не требуется | Получить подписки пользователя |
 
 | Параметр |  Тип   | Обяз. | Описание                   |
 | :------: | :----: | :---: | -------------------------- |
@@ -2357,15 +2358,52 @@ _Не описаны..._
 
 Пример:
 
-Получаем список подписчиков и подписок
+Получаем список подписок
 
 ```json
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "content.getSubscribes",
+  "method": "content.getSubscriptions",
   "params": {
-    "username": "destroyer2k"
+    "userId": "desdfsda"
+  }
+}
+```
+
+**<=== Ответ**
+
+_Не описан..._
+
+**<=x= Ошибки**
+
+_Не описаны..._
+
+---
+
+#### `content.getSubscribers`
+
+**Запрос ===>**
+
+|       Процедура       | Авторизация  | Описание                                     |
+| :-------------------: | :----------: | -------------------------------------------- |
+| content.getSubscribers | Не требуется | Получить подписчиков пользователя |
+
+| Параметр |  Тип   | Обяз. | Описание                   |
+| :------: | :----: | :---: | -------------------------- |
+|  userId  | string |  Да   | Идентификатор пользователя |
+
+Пример:
+
+Получаем список подписчиков 
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "content.getSubscribers",
+  "params": {
+    "userId": "desdfsda"
   }
 }
 ```
