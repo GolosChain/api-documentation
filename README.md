@@ -1894,7 +1894,6 @@ _Не описаны..._
 | :---------: | :----: | :-------: | :-------: | :------: | :----------------------------------------- |
 |   userId    | string | !username |           |          | Идентификатор пользователя                 |
 |  permlink   | string |    Да     |           |          | Пермлинк поста                             |
-| refBlockNum | number |    Да     |           |          | Привязанный блок поста                     |
 | contentType | string |    Нет    |    web    |          | Тип получаемого контента                   |
 |             |        |           |           |   web    | Контент, пригодный для веб-клиентов        |
 |             |        |           |           |  mobile  | Контент, пригодный для мобильных устройств |
@@ -1915,8 +1914,7 @@ _Не описаны..._
   "method": "content.getPost",
   "params": {
     "userId": "destroyer2k",
-    "permlink": "myowncontent",
-    "refBlockNum": 12345
+    "permlink": "myowncontent"
   }
 }
 ```
@@ -2009,7 +2007,6 @@ _Не описаны..._
 | :---------: | :----: | :-------: | :-------: | :------: | :----------------------------------------- |
 |   userId    | string | !username |           |          | Идентификатор пользователя                 |
 |  permlink   | string |    Да     |           |          | Пермлинк комментария                       |
-| refBlockNum | number |    Да     |           |          | Привязанный блок комментария               |
 | contentType | string |    Нет    |    web    |          | Тип получаемого контента                   |
 |             |        |           |           |   web    | Контент, пригодный для веб-клиентов        |
 |             |        |           |           |  mobile  | Контент, пригодный для мобильных устройств |
@@ -2030,8 +2027,7 @@ _Не описаны..._
   "method": "content.getComment",
   "params": {
     "userId": "destroyer2k",
-    "permlink": "re-myowncontent",
-    "refBlockNum": 12345
+    "permlink": "re-myowncontent"
   }
 }
 ```
@@ -2067,7 +2063,6 @@ _Не описаны..._
 |             |        |           |           | replies  | Получить комментарии, которые были оставлены пользователю                                  |
 |   userId    | string | !username |           |          | Идентификатор пользователя                                                                 |
 |  permlink   | string | type=post |           |          | Пермлинк поста                                                                             |
-| refBlockNum | number | type=post |           |          | Привязанный блок поста                                                                     |
 | contentType | string |    Нет    |    web    |          | Тип получаемого контента                                                                   |
 |             |        |           |           |   web    | Контент, пригодный для веб-клиентов                                                        |
 |             |        |           |           |  mobile  | Контент, пригодный для мобильных устройств                                                 |
@@ -2088,8 +2083,7 @@ _Не описаны..._
   "method": "content.getComments",
   "params": {
     "userId": "destroyer2k",
-    "permlink": "myowncontent",
-    "refBlockNum": 12345
+    "permlink": "myowncontent"
   }
 }
 ```
@@ -2236,7 +2230,6 @@ _Не описаны..._
 | :---------: | :----: | :---: | -------------------------- |
 |   userId    | string |  Да   | Идентификатор пользователя |
 |  permlink   | string |  Да   | Пермлинк поста             |
-| refBlockNum | number |  Да   | Привязанный блок поста     |
 
 Пример:
 
@@ -2249,8 +2242,7 @@ _Не описаны..._
   "method": "content.getPostVotes",
   "params": {
     "userId": "destroyer2k",
-    "permlink": "myowncontent",
-    "refBlockNum": 12345
+    "permlink": "myowncontent"
   }
 }
 ```
@@ -2277,7 +2269,6 @@ _Не описаны..._
 | :---------: | :----: | :---: | -------------------------- |
 |   userId    | string |  Да   | Идентификатор пользователя |
 |  permlink   | string |  Да   | Пермлинк поста             |
-| refBlockNum | number |  Да   | Привязанный блок поста     |
 
 Пример:
 
@@ -2290,8 +2281,7 @@ _Не описаны..._
   "method": "content.getCommentVotes",
   "params": {
     "userId": "destroyer2k",
-    "permlink": "re-myowncontent",
-    "refBlockNum": 12345
+    "permlink": "re-myowncontent"
   }
 }
 ```
