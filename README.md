@@ -209,7 +209,7 @@ async function send(method, params) {}
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "frame.getEmbed",
+  "method": "auth.generateSecret",
   "params": {}
 }
 ```
@@ -249,7 +249,7 @@ async function send(method, params) {}
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "frame.getEmbed",
+  "method": "auth.authorize",
   "params": {
     "user": "destroyer2k",
     "sign": "DfalkjafLasfjklASDflhjlpqlkjaASDFlhkfadljklLAsfhl"
