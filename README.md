@@ -66,6 +66,7 @@
     - [content.resolveProfile](#contentresolveprofile)
     - [content.getSubscriptions](#contentgetsubscriptions)
     - [content.getSubscribers](#contentgetsubscribers)
+    - [content.getHeaders](#contentgetheaders)
   - [Встроенный контент](#встроенный-контент)
     - [frame.getEmbed](#framegetembed)
 
@@ -2573,6 +2574,46 @@ _Не описаны..._
 | Параметр |  Тип   | Варианты | Описание                   |
 | :------: | :----: | :------: | :------------------------- |
 |  status  | string |    OK    | Транзакция была обработана |
+
+**<=x= Ошибки**
+
+_Не описаны..._
+
+---
+
+#### `content.getHeaders`
+
+**Запрос ===>**
+
+|     Процедура      | Авторизация  | Описание                                    |
+| :----------------: | :----------: | ------------------------------------------- |
+| content.getHeaders | Не требуется | Получить список заголовков указанных постов |
+
+|  Параметр  |                  Тип                   | Обяз. | Описание                            |
+| :--------: | :------------------------------------: | :---: | ----------------------------------- |
+| contentIds | { userId: string, permlink: string }[] |  Да   | Массив contentId необходимых постов |
+
+Пример:
+
+Получаем список заголовков для указанных постов
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "content.getHeaders",
+  "params": {
+    "contendIds": [
+      { "userId": "destroyer2k", "permlink": "my-super-post" },
+      { "userId": "destroyer2k", "permlink": "my-another-post" }
+    ]
+  }
+}
+```
+
+**<=== Ответ**
+
+_Не описан..._
 
 **<=x= Ошибки**
 
