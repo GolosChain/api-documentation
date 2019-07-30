@@ -68,6 +68,8 @@
     - [content.getSubscribers](#contentgetsubscribers)
     - [content.getProposals](#contentgetproposals)
     - [content.getHeaders](#contentgetheaders)
+    - [content.waitForBlock](#contentwaitforblock)
+    - [content.waitForTransaction](#contentwaitfortransaction)
   - [Встроенный контент](#встроенный-контент)
     - [frame.getEmbed](#framegetembed)
   - [Провайдер бендвича](#провайдер-бендвича)
